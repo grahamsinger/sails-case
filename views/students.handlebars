@@ -1,0 +1,14 @@
+<h1>Available Students...</h1>
+
+{{#each students}}
+  <div class="">
+    <a href="/student/{{this.id}}">
+          {{this.name}}
+      </a>
+  </div>
+{{/each}}
+
+<div >
+    <button id="new-student-btn" type="button" name="button">Add New Student</button>
+    <input id="new-student-name" type="text" placeholder="New Student Name" hidden>
+</div>
