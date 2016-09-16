@@ -1,12 +1,14 @@
 <h1>Available Students...</h1>
 
-{{#each students}}
-  <div class="">
-    <a href="/student/{{this.id}}">
-          {{this.name}}
-      </a>
-  </div>
-{{/each}}
+<div class="student-list">
+    {{#each students}}
+      <div class="">
+        <a href="/student/{{this.id}}">
+              {{this.name}}
+          </a>
+      </div>
+    {{/each}}
+</div>
 
 <div >
     <button id="new-student-btn" type="button" name="button">Add New Student</button>

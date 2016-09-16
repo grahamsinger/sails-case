@@ -7,15 +7,15 @@
 
 module.exports = {
 
-  attributes: {
-      name: {
-          type: 'string'
-      },
-      grade: {
-          type: 'string'
-      },
-      needsIEP: {
-         type: 'boolean'
-      }
-  }
+	attributes: {
+		name: {
+			type: 'string'
+		},
+		grade: {
+			type: 'string'
+		},
+		needsIEP: {
+			type: 'boolean'
+		}
+	}
 };

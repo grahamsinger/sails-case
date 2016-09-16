@@ -44,19 +44,19 @@ module.exports.routes = {
 
 	'get /students': 'StudentController.students',
 	'get /student/:id': function(req, res) {
-		console.log(req.params);
-		Student.findOne({
-			'id': req.params.id
-		}).exec(function(err, student) {
-			console.log(student)
-			if (err) {
-				return res.serverError(err);
-			}
-			return res.view('student', {
-				student: student
+			console.log(req.params);
+			Student.findOne({
+				'id': req.params.id
+			}).exec(function(err, student) {
+				console.log("in get" + student)
+				if (err) {
+					return res.serverError(err);
+				}
+				return res.view('student', {
+					student: student
+				});
 			});
-		});
-	}
-
+		}
+		//'post /student': 'StudentController.updateStudents'
 
 };

@@ -7,6 +7,7 @@
 
 module.exports = {
 	students: function(req, res) {
+		console.log("Getting students!");
 		Student.find(function(err, students) {
 			if (err) {
 				return res.serverError(err);
@@ -14,6 +15,11 @@ module.exports = {
 			return res.view('students', {
 				students: students
 			});
+		});
+	},
+	updateStudents: function(req, res) {
+		return res.ok({
+			pathToView: 'students'
 		});
 	}
 };
